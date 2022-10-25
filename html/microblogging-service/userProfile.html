@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>User Page</title>
+    <title>User Profile</title>
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
     <link href="stylesheet.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,9 +28,14 @@
               <img src="images\blank_profile_pic.png">
             </div>
 
+            <div class="followContainer">
+              <div class="followButCont">
+                <button id="followBut" class="followBut">Follow</button>
+              </div>
+            </div>
             <div class="profilecardnameidcont">
               <div class="profilecardnamecont">
-                <span id="profilecardname">"User Name New"</span>
+                <span id="profilecardname">"User Name"</span>
               </div>
               <span id="profilecarduid">"@User ID"</span>
             </div>
@@ -70,8 +75,8 @@
                   <textarea id="posttweetta" class="posttweetta" 
                   placeholder="Tweet..."></textarea>
 
-                  <div class="posttweetcountcont">
-                    <span class="posttweetcount"><span id="totalchars">0</span>/250</span>
+                  <div class="postTweetCountCont">
+                    <span class="postTweetCount"><span id="totalchars">0</span>/250</span>
                   </div>
                 </div>
                 <div class="posttweetbutcont">
