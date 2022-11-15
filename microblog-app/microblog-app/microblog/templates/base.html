@@ -4,12 +4,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Microblogging app</title>
         <link rel="stylesheet"
-              href="{{ url_for('static', filename='microblog.css') }}">
+              href="{{ url_for('static', filename='stylesheet.css') }}">
     </head>
     <body>
         <header>
             <h1>Microblogging</h1>
-            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.index_user') }}">User</a>
         </header>
         <section class="content">
             {% block content %}{% endblock %}

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>User Profile</title>
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='stylesheet.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,6 +28,11 @@
               <img src="images\blank_profile_pic.png">
             </div>
 
+            <div class="followContainer">
+              <div class="followButCont">
+                <button id="followBut" class="followBut">Follow</button>
+              </div>
+            </div>
             <div class="profilecardnameidcont">
               <div class="profilecardnamecont">
                 <span id="profilecardname">"User Name"</span>
@@ -90,7 +95,7 @@
                   <section class="content">
                     {% block content %}
                       <section>
-                        <h2>Latest posts from the people you follow</h2>
+                        <h2>Own posts</h2>
                         {% include 'posts_template.html' %}
                       </section>
                     {% endblock %}
