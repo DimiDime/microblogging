@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Home Page</title>
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
-    <link href="microblog/static/stylesheet.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylesheet.css') }} rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
@@ -81,7 +81,15 @@
             </div>
             <div>
               <ul id="tweetscontainer" class="tweetscontainer">
-
+                <div> 
+                  <header>
+                    <h1>Microblogging</h1>
+                    <a href="{{ url_for('main.index') }}">Home</a>
+                  </header>
+                  <section class="content">
+                    {% block content %}{% endblock %}
+                  </section> 
+                </div>
               </ul>
             </div>
           </div>
