@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Register{% endblock %} 
+    {% block content
+    %}
+    <h1>REGISTER </h1>
+    <form action="{{ url_for('auth.register') }}" method="post">
+        <div><label>Email: <input type="email" name="email" required/></label></div>
+        <div><label>Password: <input type="password" name="password" required/></label></div>
+        <div><label>Repeat password: <input type="password" name="password_repeat" required/></label></div>
+        <div><input type="submit" value="Register"/></div>
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <div class="notification">{{ message }}</div>
+    {% endfor %}
+{% endwith %}
+
+{% endblock %}
